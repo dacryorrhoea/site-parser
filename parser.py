@@ -4,8 +4,8 @@ from selenium import webdriver as wd
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-import time, re
 import data_client
+import time, re
 import random
 
 
@@ -205,7 +205,7 @@ class Parser:
             elem = to_parse.find('div', class_='reviews--empty')
             if elem:
                 dict_['rating'] = 0
-                dict_['number_reviews'] = 0
+                dict_['count_reviews'] = 0
             else:
                 num = html_validate(to_parse.find('div', class_='rating-top'), 'number')
                 dict_['rating'] =  float(num) / 10 if num else num
