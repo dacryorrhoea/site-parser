@@ -1,14 +1,13 @@
 import requests
-from bs4 import BeautifulSoup
-from selenium import webdriver as wd
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
+from sqlite3 import Error
+from bs4 import BeautifulSoup
 import time, re
 import datetime
 import random
 import psycopg2
-from sqlite3 import Error
 import datetime
 from datetime import timedelta
 from lorem.text import TextLorem
